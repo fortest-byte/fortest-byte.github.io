@@ -7,6 +7,17 @@
     </style>
 </head>
 <body>
-<canvas id="application" width="350" height="200"></canvas>
+<!--<canvas id="application" width="350" height="200"></canvas>-->
+<canvas id="myCanvas" width="350" height="200"
+        style="background-color:#eee; border: 1px solid #ccc;">
+    Ваш браузер не поддерживает Canvas
+</canvas>
+<script>
+    var canvas = document.getElementById("myCanvas"),
+        context = canvas.getContext("2d");
+
+    context.strokeRect(50, 40, 100, 100);
+    context.fillRect(200, 40, 100, 100);
+</script>
 </body>
 </html>
