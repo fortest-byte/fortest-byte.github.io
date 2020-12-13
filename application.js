@@ -7,7 +7,7 @@ requirejs(['webcam'], function(webcam) {
     // Initializes components and starts the game loop
     function initialize() {
         // Create a canvas element to which we will copy video.
-        canvas = document.createElement('canvas');
+        /*canvas = document.createElement('canvas');
         var webcamDimensions = webcam.getDimensions();
         canvas.width = webcamDimensions.width;
         canvas.height = webcamDimensions.height;
@@ -17,6 +17,12 @@ requirejs(['webcam'], function(webcam) {
 
         // For demonstration purposes add the canvas to the DOM so we can see it.
         document.getElementById("application").appendChild( canvas );
+
+        context.strokeRect(50, 40, 100, 100);
+        context.fillRect(200, 40, 100, 100);*/
+
+        canvas = document.getElementById('application');
+        context = canvas.getContext('2d');
 
         context.strokeRect(50, 40, 100, 100);
         context.fillRect(200, 40, 100, 100);
