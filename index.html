@@ -8,13 +8,16 @@
 </head>
 <body>
 <!--<canvas id="application" width="350" height="200"></canvas>-->
-<canvas id="myCanvas" width="350" height="200"
+<div id="myCanvas" width="350" height="200"
         style="background-color:#eee; border: 1px solid #ccc;">
     Ваш браузер не поддерживает Canvas
-</canvas>
+</div>
 <script>
-    var canvas = document.getElementById("myCanvas"),
-        context = canvas.getContext("2d");
+    canvas = document.createElement('canvas');
+    context = canvas.getContext("2d");
+
+    document.getElementById("myCanvas").appendChild(canvas);
+
 
     context.strokeRect(50, 40, 100, 100);
     context.fillRect(200, 40, 100, 100);
