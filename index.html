@@ -18,9 +18,8 @@
 
     document.getElementById("myCanvas").appendChild(canvas);
 
-
-    context.strokeRect(50, 40, 100, 100);
-    context.fillRect(200, 40, 150, 150);
+    var webcamDimensions = webcam.getDimensions();
+    webcam.copyToContext(context);
 </script>
 </body>
 </html>
