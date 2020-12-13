@@ -17,6 +17,9 @@ requirejs(['webcam'], function(webcam) {
 
         // For demonstration purposes add the canvas to the DOM so we can see it.
         document.getElementById("application").appendChild( canvas );
+
+        context.strokeRect(50, 40, 100, 100);
+        context.fillRect(200, 40, 100, 100);
     }
 
     // Runs one iteration of the game loop
