@@ -10,7 +10,7 @@
 <!--<canvas id="application" width="350" height="200"></canvas>-->
 <div id="myCanvas" width="350" height="200"
         style="background-color:#eee; border: 1px solid #ccc;">
-    Ваш браузер не поддерживает Canvas1
+    Ваш браузер не поддерживает Canvas2
 </div>
 <script>
     canvas = document.createElement('canvas');
@@ -19,6 +19,9 @@
     document.getElementById("myCanvas").appendChild(canvas);
 
     var webcamDimensions = webcam.getDimensions();
+    canvas.width = webcamDimensions.width;
+    canvas.height = webcamDimensions.height;
+
     webcam.copyToContext(context);
 </script>
 </body>
