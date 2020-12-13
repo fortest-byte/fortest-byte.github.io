@@ -25,7 +25,9 @@ requirejs(['webcam'], function(webcam) {
     // Runs one iteration of the game loop
     function tick() {
         // Copy an image from the camera stream onto our canvas
-        webcam.copyToContext(context);
+        //webcam.copyToContext(context);
+        context.strokeRect(50, 40, 100, 100);
+        context.fillRect(200, 40, 100, 100);
 
         // Request another iteration of the gameloop
         window.requestAnimationFrame(tick);
