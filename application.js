@@ -1,6 +1,6 @@
 "use strict";
 
-requirejs([], function() {
+requirejs(['webcam'], function(webcam) {
 
     var canvas, context = undefined;
 
